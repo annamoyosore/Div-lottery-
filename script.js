@@ -26,7 +26,8 @@ body: JSON.stringify(data)
 const result = await res.json();
 
 if(result.success){
-alert("✅ Submitted successfully!");
+window.location.href = "success.html";
+};
 document.getElementById("bioForm").reset();
 }else{
 alert("❌ Failed to submit");
