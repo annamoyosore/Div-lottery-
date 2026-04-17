@@ -25,6 +25,8 @@ body: JSON.stringify(data)
 
 const result = await res.json();
 
+console.log("Response:", result);
+
 if(result.success){
 document.getElementById("bioForm").reset();
 window.location.href = "success.html";
@@ -33,7 +35,7 @@ alert("❌ Failed to submit");
 }
 
 } catch (err){
+console.log("Network error:", err);
 alert("⚠️ Network error");
-console.log(err);
 }
 });
