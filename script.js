@@ -26,14 +26,14 @@ body: JSON.stringify(data)
 const result = await res.json();
 
 if(result.success){
-window.location.href = "success.html";
-};
 document.getElementById("bioForm").reset();
-}else{
+window.location.href = "success.html";
+} else {
 alert("❌ Failed to submit");
 }
 
 } catch (err){
 alert("⚠️ Network error");
+console.log(err);
 }
 });
